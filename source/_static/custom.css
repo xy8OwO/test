@@ -1,0 +1,138 @@
+html.light {
+    --yue-c-code-text: var(--yue-c-text);
+}
+
+html.dark {
+    --yue-c-code-text: var(--yue-c-text);
+}
+
+#badges img {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#home-head {
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+    justify-content: flex-start; /* 添加此行实现左对齐 */
+    column-gap: 20px;
+}
+
+@media (max-width: 600px) {
+    #home-head {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #home-head a img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* 无效果 */
+/*#home-head h1 {
+    font-size: 4.2rem;
+    margin-top: 3.4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}*/
+/* 效果1 */
+/*#home-head h1 {
+    font-size: 4.2rem;
+    margin-top: 3.4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #fff;
+    text-shadow: 
+        0 0 5px #ff00ff,
+        0 0 10px #ff00ff,
+        0 0 20px #ff00ff,
+        0 0 40px #ff00ff;
+    animation: neon-pulse 1.5s infinite alternate;
+}
+@keyframes neon-pulse {
+    from {
+        text-shadow: 
+            0 0 5px #ff00ff,
+            0 0 10px #ff00ff;
+    }
+    to {
+        text-shadow: 
+            0 0 10px #ff00ff,
+            0 0 20px #ff00ff,
+            0 0 30px #ff00ff,
+            0 0 40px #ff00ff;
+    }
+}*/
+/* 效果2 */
+#home-head h1 {
+    font-size: 4.2rem;
+    margin-top: 3.4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    
+    background: linear-gradient(45deg, 
+                #7c3aed, #a855f7, #f0abfc, 
+                #fcd34d, #fde68a, #f0abfc, 
+                #a855f7, #7c3aed);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: royal-purple 8s ease infinite;
+}
+
+@keyframes royal-purple {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 效果3 */
+/*#home-head h1 {
+    font-size: 4.2rem;
+    margin-top: 3.4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #8b5cf6;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+#home-head h1:hover {
+    color: #c084fc;
+    text-shadow: 
+        0 0 10px rgba(168, 85, 247, 0.7),
+        0 0 30px rgba(168, 85, 247, 0.5);
+}
+
+#home-head h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #c084fc, transparent);
+    transition: width 0.5s ease;
+}
+
+#home-head h1:hover::after {
+    width: 100%;
+}*/
+
+
+#badges {
+    display: flex;        /* 使用弹性布局（Flexbox） */
+    flex-wrap: wrap;      /* 允许内容换行 */
+    gap: 10px;            /* 设置子元素之间的间距 */
+    margin-bottom: 3em;   /* 底部外边距 */
+    justify-content: flex-start; /* 添加此行实现左对齐 */
+}
+
+
